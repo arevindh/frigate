@@ -179,17 +179,6 @@ export default function Camera({ camera }) {
         <Heading className="p-2" size="2xl">
           {camera.replaceAll('_', ' ')}
         </Heading>
-        <select
-          className="basis-1/8 cursor-pointer rounded dark:bg-slate-800"
-          value={viewSource}
-          onChange={(e) => setViewSource(e.target.value)}
-        >
-          {sourceValues.map((item) => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select>
       </div>
 
       <ButtonsTabbed viewModes={['live', 'debug']} currentViewMode={viewMode} setViewMode={setViewMode} />

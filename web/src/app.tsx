@@ -24,7 +24,7 @@ export default function App() {
             </div>
           ) : (
             <div className="flex flex-row min-h-screen w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
-              <Sidebar />
+
               <div className="w-full flex-auto mt-16 min-w-0">
                 <Router>
                   <AsyncRoute path="/cameras/:camera/editor" getComponent={Routes.getCameraMap} />

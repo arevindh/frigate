@@ -863,38 +863,7 @@ function Event({
                 : `, ${event.sub_label}: ${(event?.data?.sub_label_score * 100).toFixed(0)}%`}
             </div>
           </div>
-          <div class="hidden sm:flex flex-col justify-end mr-2">
-            {event.end_time && event.has_snapshot && (event?.data?.type || 'object') == 'object' && (
-              <Fragment>
-                {event.plus_id ? (
-                  <div className="uppercase text-xs underline">
-                    <Link
-                      href={`https://plus.frigate.video/dashboard/edit-image/?id=${event.plus_id}`}
-                      target="_blank"
-                      rel="nofollow"
-                    >
-                      Edit in Frigate+
-                    </Link>
-                  </div>
-                ) : (
-                  <Button
-                    color="gray"
-                    disabled={getUploadButtonState(event.id).isDisabled}
-                    onClick={(e) => showSubmitToPlus(event.id, event.label, event?.data?.box || event.box, e)}
-                  >
-                    {getUploadButtonState(event.id).label}
-                  </Button>
-                )}
-              </Fragment>
-            )}
-          </div>
           <div class="flex flex-col">
-            <Delete
-              className="h-6 w-6 cursor-pointer"
-              stroke="#f87171"
-              onClick={(e) => onDelete(e, event.id, event.retain_indefinitely)}
-            />
-
             <Download
               className="h-6 w-6 mt-auto"
               stroke={event.has_clip || event.has_snapshot ? '#3b82f6' : '#cbd5e1'}

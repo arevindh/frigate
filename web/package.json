@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc && vite build --base=/BASE_PATH/",
+    "build": "tsc && vite build --base=/",
     "lint": "eslint --ext .jsx,.js,.tsx,.ts --ignore-path .gitignore .",
     "prettier:write": "prettier -u -w --ignore-path .gitignore \"*.{ts,tsx,js,jsx,css,html}\"",
     "test": "vitest",

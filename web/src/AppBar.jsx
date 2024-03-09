@@ -54,16 +54,7 @@ export default function AppBar() {
   return (
     <Fragment>
       <BaseAppBar title={LinkedLogo} overflowRef={moreRef} onOverflowClick={handleShowMenu} />
-      {showMoreMenu ? (
-        <Menu onDismiss={handleDismissMoreMenu} relativeTo={moreRef}>
-          <MenuItem icon={AutoAwesomeIcon} label="Auto dark mode" value="media" onSelect={handleSelectDarkMode} />
-          <MenuSeparator />
-          <MenuItem icon={LightModeIcon} label="Light" value="light" onSelect={handleSelectDarkMode} />
-          <MenuItem icon={DarkModeIcon} label="Dark" value="dark" onSelect={handleSelectDarkMode} />
-          <MenuSeparator />
-          <MenuItem icon={FrigateRestartIcon} label="Restart Frigate" onSelect={handleRestart} />
-        </Menu>
-      ) : null}
+      {showMoreMenu ? null : null}
       {showDialog ? (
         <Prompt
           onDismiss={handleDismissRestartDialog}

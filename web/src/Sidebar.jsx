@@ -44,13 +44,6 @@ export default function Sidebar() {
       </Match>
       {birdseye?.enabled ? <Destination href="/birdseye" text="Birdseye" /> : null}
       <Destination href="/events" text="Events" />
-      <Destination href="/exports" text="Exports" />
-      <Separator />
-      <Destination href="/storage" text="Storage" />
-      <Destination href="/system" text="System" />
-      <Destination href="/config" text="Config" />
-      <Destination href="/logs" text="Logs" />
-      <Separator />
       <div className="flex flex-grow" />
       {ENV !== 'production' ? (
         <Fragment>
